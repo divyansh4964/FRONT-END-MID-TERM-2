@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f7f5">
+  <title>Student Result Card | Class Result Sheet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">ACADEMIC SESSION · 2025–26</p>
+        <h1>Class Result Sheet</h1>
+        <p class="intro">A clear overview of student performance across three subjects.</p>
+      </div>
+      <button class="generate-button" id="generate-button" type="button">
+        <span class="button-icon" aria-hidden="true">↗</span>
+        Generate Results
+      </button>
+    </header>
+
+    <section class="results-section" aria-labelledby="results-heading">
+      <div class="section-heading">
+        <div>
+          <h2 id="results-heading">Student results</h2>
+          <p>Maximum marks: 300 <span class="separator">/</span> 3 subjects</p>
+        </div>
+        <span class="class-tag">CLASS 10 · A</span>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <caption class="visually-hidden">Student totals, percentage, grade, and pass or fail result</caption>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Total <span class="th-subtext">/ 300</span></th>
+              <th scope="col">Percentage</th>
+              <th scope="col">Grade</th>
+              <th scope="col">Result</th>
+            </tr>
+          </thead>
+          <tbody id="results-body">
+            <tr class="empty-row">
+              <td colspan="5">Select “Generate Results” to view the class results.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note" id="table-note" aria-live="polite">Five students · Maths, Science, English</p>
+    </section>
+
+    <section class="summary-section" aria-labelledby="summary-heading" aria-live="polite">
+      <div class="summary-title">
+        <p class="eyebrow">CLASS OVERVIEW</p>
+        <h2 id="summary-heading">At a glance</h2>
+      </div>
+      <div class="summary-grid" id="summary-grid">
+        <article class="summary-item topper-item">
+          <span class="summary-label">Top performer</span>
+          <strong class="summary-value" id="topper-value">—</strong>
+          <span class="summary-detail" id="topper-detail">Generate results to calculate</span>
+        </article>
+        <article class="summary-item average-item">
+          <span class="summary-label">Class average</span>
+          <strong class="summary-value" id="average-value">—</strong>
+          <span class="summary-detail">Across all valid student records</span>
+        </article>
+        <article class="summary-item pass-item">
+          <span class="summary-label">Students passed</span>
+          <strong class="summary-value" id="passed-value">—</strong>
+          <span class="summary-detail" id="passed-detail">Out of 5 students</span>
+        </article>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <span>STUDENT RESULT CARD</span>
+      <span>Every subject requires 35 marks to pass.</span>
+    </footer>
+  </main>
+</body>
+</html>
